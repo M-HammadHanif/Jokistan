@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    *{
+        font-family: "Open Sans", serif;
+        font-optical-sizing: auto;
+        font-weight: normal;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+        margin: 0;
+        padding: 0;
+
+    }
+    #submit-joke {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+    }
+    
+    #submit-joke h1 {
+        font-size: 36px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    label {
+        margin-top: 15px;
+        font-weight: bold;
+        font-size: 14px;
+        color: #333;
+    }
+    
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    textarea {
+        resize: vertical;
+    }
+    
+    #submit-btn {
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: rgb(68, 211, 255);
+        color: #000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    
+    #submit-btn:hover {
+        background-color: rgb(154, 46, 255);
+    }
+    </style>
+    <title>Submit a Joke</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <img id="logo" src="images/logo.png" alt="Jokistan">
+            <ul id="nav-container">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="submit joke.html">Submit a Joke</a></li>
+                <li><a href="contact me .html">Contact</a></li>
+            </ul>
+           
+        </nav>
+    </header>
+
+    <main>
+        <section id="submit-joke">
+            <h1>Submit Your Joke</h1>
+            <form action="/submit-joke" method="post" id="jokeForm">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="category">Joke Category:</label>
+                <select id="category" name="category" required>
+                    <option value="">Select a category</option>
+                    <option value="puns">Puns</option>
+                    <option value="one-liners">One-Liners</option>
+                    <option value="knock-knock">Knock-Knock</option>
+                    <option value="dad-jokes">Dad Jokes</option>
+                    <option value="others">Others</option>
+                </select>
+
+                <label for="joke">Your Joke:</label>
+                <textarea id="joke" name="joke" rows="5" placeholder="Write your joke here..." required></textarea>
+
+                <button type="submit" id="submit-btn">Submit Joke</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
